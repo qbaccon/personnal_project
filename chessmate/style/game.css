@@ -1,0 +1,262 @@
+@font-face
+{
+	font-family: "Audiowibe";
+	src: url('Audiowide-Regular.ttf');
+}
+
+@font-face
+{
+	font-family: "Abel";
+	src: url('Abel-Regular.ttf');
+}
+
+html
+{
+	background-color: #e5e5e5;
+}
+
+body
+{
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+a
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: Audiowibe;
+	color: #e5e5e5;
+	background-color: #252525;
+	padding: 8px;
+	border: solid #252525 2px;
+	border-radius: 0px 0px 10px 0px;
+	transition-duration: 0.15s;
+}
+
+a:hover
+{
+	color: #252525;
+	background-color: #e5e5e5;
+	transition-duration: 0.15s;
+}
+
+h1
+{
+	font-family: Audiowibe;
+	font-size: 24px;
+	text-align: center;
+}
+
+@media (max-width: 410px)
+{
+	h1
+	{
+		font-size: 18px;
+	}
+}
+
+p.msg, #chess_msg
+{
+	font-family: Abel;
+	font-size: 20px;
+	border-bottom: solid 3px #101010;
+	filter: opacity(0%);
+	transition: all 0.5s ease;
+}
+
+.game
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+}
+
+.board
+{
+	display: grid;
+	grid-template-columns: 10px 50px 50px 50px 50px 50px 50px 50px 50px;
+	grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 10px;
+}
+
+.board #white, .board #black
+{
+	width: 50px;
+	height: 50px;
+}
+
+@media (max-width: 410px)
+{
+	.board
+	{
+		grid-template-columns: 10px 30px 30px 30px 30px 30px 30px 30px 30px;
+		grid-template-rows: 30px 30px 30px 30px 30px 30px 30px 30px 10px;
+	}
+
+	.board #white, .board #black
+	{
+		width: 30px;
+		height: 30px;
+	}
+
+	.board img
+	{
+		width: 25px;
+		height: 25px;
+	}
+
+	.board img[src='Z']
+	{
+		width: 0px;
+		height: 0px;
+	}
+}
+
+#black
+{
+	background-color: #606060;
+}
+
+#white
+{
+	background-color: #c5c5c5;
+}
+
+section div img
+{
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+
+.coo_num
+{
+	font-family: Abel;
+	height: 50px;
+	border-right: solid 2px #101010;
+}
+
+.coo_chr
+{
+	font-family: Abel;
+	width: 50px;
+	border-top: solid 2px #101010;
+}
+
+.coo_chr p
+{
+	margin: 0px;
+	padding-left: 20px;
+}
+
+@media (max-width: 410px)
+{
+	section div img
+	{
+		top: 2.5px;
+		left: 2.5px;
+	}
+
+	.coo_num
+	{
+		height: 30px;
+	}
+
+	.coo_chr
+	{
+		width: 30px;
+	}
+
+	.coo_chr p
+	{
+		padding-left: 12px;
+	}
+}
+
+.form_select, .upgrade
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #606060;
+	border-radius: 15px;
+	padding: 20px;
+	transition-duration: 0.15s;
+}
+
+.upgrade
+{
+	display: none;
+}
+
+.upgrade p
+{
+	font-family: Abel;
+	background-color: #252525;
+	color: #e5e5e5;
+	border-radius: 5px;
+	padding: 5px 10px 5px 10px;
+	font-size: 20px;
+}
+
+.upgrade select
+{
+	outline: none;
+	font-family: Abel;
+	font-size: 16px;
+	background-color: #252525;
+	color: #e5e5e5;
+	border: solid 1px #252525;
+	border-radius: 8px;
+	transition-duration: 0.12s;
+}
+
+.upgrade select:hover
+{
+	background-color: #e5e5e5;
+	color: #252525;
+	transition-duration: 0.12s;
+}
+
+.upgrade p
+{
+	margin: 0px 0px 5px 0px;
+}
+
+p#piece
+{
+	margin: 0px 0px 5px 0px;
+}
+
+p#end
+{
+	margin: 15px 0px 5px 0px;
+}
+
+button#send_upg
+{
+	font-family: Abel;
+	font-size: 20px;
+	background-color: #252525;
+	color: #e5e5e5;
+	border-radius: 12px;
+	border: solid 2px #252525;
+	margin: 18px 0px 0px 0px;
+	transition-duration: 0.18s;
+}
+
+button#send_upg:hover
+{
+	background-color: #e5e5e5;
+	color: #252525;
+	transition-duration: 0.18s;
+}

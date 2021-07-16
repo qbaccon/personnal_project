@@ -1,0 +1,216 @@
+@font-face
+{
+	font-family: "Audiowibe";
+	src: url('Audiowide-Regular.ttf');
+}
+
+@font-face
+{
+	font-family: "Abel";
+	src: url('Abel-Regular.ttf');
+}
+
+html
+{
+	background-color: #e5e5e5;
+}
+
+body
+{
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+h1
+{
+	display: inline;
+	font-family: Audiowibe;
+	font-size: 24px;
+}
+
+h1 img
+{
+	vertical-align: -40%;
+}
+
+p.msg
+{
+	border-bottom: solid 3px #101010;
+	filter: opacity(0%);
+	transition: all 0.5s ease;
+}
+
+.game
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+}
+
+.board
+{
+	display: grid;
+	grid-template-columns: 10px 50px 50px 50px 50px 50px;
+	grid-template-rows: 50px 50px 50px 50px 50px 10px;
+}
+
+.board_initK2
+{
+	display: grid;
+	grid-template-columns: 10px 50px 50px 50px 50px 50px 50px 50px 50px;
+	grid-template-rows: 50px 50px 50px 50px 50px 10px;
+}
+
+.board #white, .board #black
+{
+	width: 50px;
+	height: 50px;
+}
+
+#black
+{
+	background-color: #606060;
+}
+
+#white
+{
+	background-color: #c5c5c5;
+}
+
+section div img
+{
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+
+.coo_num
+{
+	height: 50px;
+	border-right: solid 2px #101010;
+}
+
+.coo_chr
+{
+	width: 50px;
+	border-top: solid 2px #101010;
+}
+
+.coo_chr p
+{
+	margin: 0px;
+	padding-left: 20px;
+}
+
+.form_select, .upgrade
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #606060;
+	border-radius: 15px;
+	padding: 20px;
+}
+
+.upgrade
+{
+	display: none;
+}
+
+.form_select p, .upgrade p
+{
+	font-family: Abel;
+	background-color: #252525;
+	color: #e5e5e5;
+	border-radius: 5px;
+	padding: 5px 10px 5px 10px;
+	font-size: 20px;
+}
+
+.form_select select, .upgrade select
+{
+	outline: none;
+	font-family: Abel;
+	font-size: 16px;
+	background-color: #252525;
+	color: #e5e5e5;
+	border: solid 1px #252525;
+	border-radius: 8px;
+	transition-duration: 0.12s;
+}
+
+.form_select select:hover, .upgrade select:hover
+{
+	background-color: #e5e5e5;
+	color: #252525;
+	transition-duration: 0.12s;
+}
+
+.upgrade p
+{
+	margin: 0px 0px 5px 0px;
+}
+
+p#piece
+{
+	margin: 0px 0px 5px 0px;
+}
+
+p#end
+{
+	margin: 15px 0px 5px 0px;
+}
+
+button
+{
+	margin: 30px 0px 0px 0px;
+}
+
+#train
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#train p
+{
+	text-align: center;
+	font-size: 20px;
+	font-family: Abel;
+}
+
+#train button
+{
+	margin: 10px 25px 10px 25px;
+}
+
+#continue
+{
+	display: none;
+}
+
+button
+{
+	font-family: Abel;
+	font-size: 20px;
+	background-color: #252525;
+	color: #e5e5e5;
+	border-radius: 12px;
+	border: solid 2px #252525;
+	margin: 18px 0px 0px 0px;
+	transition-duration: 0.18s;
+}
+
+button:hover
+{
+	background-color: #e5e5e5;
+	color: #252525;
+	transition-duration: 0.18s;
+}
