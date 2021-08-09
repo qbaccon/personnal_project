@@ -10,6 +10,11 @@
 	src: url('Abel-Regular.ttf');
 }
 
+html
+{
+	background-image: url("../pctrs/background22.png");
+}
+
 html, header, body, footer
 {
 	margin: 0px;
@@ -27,7 +32,7 @@ body
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #e5e5e5;
+	/* background-color: #e5e5e5; */
 }
 
 #title
@@ -36,6 +41,7 @@ body
 	font-family: Audiowibe;
 	border-top: solid 2px #252525;
 	border-bottom: solid 2px #252525;
+	background-color: #e5e5e5a0;
 	margin: 50px;
 }
 
@@ -50,9 +56,21 @@ body
 #game_mod a
 {
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 22px;
 	font-family: Abel;
 	color: #252525;
+	border-top: solid 2px #252525;
+	border-bottom: solid 2px #252525;
+	background-color: #e5e5e5a0;
+	transition-duration: 0.18s;
+}
+
+#game_mod a:hover
+{
+	color: #a01c1c;
+	border-color: #a01c1c;
+	box-shadow: 0px 0px 15px #e5e5e5;
+	transition-duration: 0.18s;
 }
 
 footer

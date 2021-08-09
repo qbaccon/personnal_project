@@ -14,6 +14,7 @@
 		<p id="title">Bonjour, vous venez tester votre mémoire ?</p>
 		<div id="game_mod">
 			<a href="game_mod/index_double.php">Tri par pair</a>
+			<a href="game_mod/index_simon.php">Simon</a>
 		</div>
 	</body>
 	<footer>

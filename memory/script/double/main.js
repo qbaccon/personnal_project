@@ -126,7 +126,7 @@ grid.forEach(till => {
 					till_one.style.backgroundColor = "#29af18";
 					till_two.style.backgroundColor = "#29af18";
 					nb_double_rem--;
-					nb_double_rem_p.textContent = "Nombre de pairs restantes: " + nb_double_rem;
+					nb_double_rem_p.textContent = "Nombre de paires restantes: " + nb_double_rem;
 					cnt = 0;
 				}
 				else
@@ -154,7 +154,7 @@ lv_ez.addEventListener('click', function(){
 	cnt = 0;
 	nb_hit_false = 0;
 	nb_hit_false_p.textContent = "Nombre de coups ratés: 0";
-	nb_double_rem_p.textContent = "Nombre de pairs restantes: " + nb_double_rem;
+	nb_double_rem_p.textContent = "Nombre de paires restantes: " + nb_double_rem;
 });
 lv_casu.addEventListener('click', function(){
 	nb_double_rem = init_double(1, nb_double_rem, grid);
@@ -165,7 +165,7 @@ lv_casu.addEventListener('click', function(){
 	cnt = 0;
 	nb_hit_false = 0;
 	nb_hit_false_p.textContent = "Nombre de coups ratés: 0";
-	nb_double_rem_p.textContent = "Nombre de pairs restantes: " + nb_double_rem;
+	nb_double_rem_p.textContent = "Nombre de paires restantes: " + nb_double_rem;
 });
 lv_hard.addEventListener('click', function(){
 	nb_double_rem = init_double(2, nb_double_rem, grid);
@@ -176,5 +176,5 @@ lv_hard.addEventListener('click', function(){
 	cnt = 0;
 	nb_hit_false = 0;
 	nb_hit_false_p.textContent = "Nombre de coups ratés: 0";
-	nb_double_rem_p.textContent = "Nombre de pairs restantes: " + nb_double_rem;
+	nb_double_rem_p.textContent = "Nombre de paires restantes: " + nb_double_rem;
 });
