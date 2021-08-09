@@ -1,0 +1,136 @@
+@font-face
+{
+	font-family: "Audiowibe";
+	src: url('Audiowide-Regular.ttf');
+}
+
+@font-face
+{
+	font-family: "Abel";
+	src: url('Abel-Regular.ttf');
+}
+
+html
+{
+	background-image: url("../pctrs/background22.png");
+}
+
+html, header, body
+{
+	margin: 0px;
+}
+
+section#game
+{
+	background-color: #e5e5e5a0;
+}
+
+header
+{
+	width: 100%;
+	height: 30px;
+	background-color: #252525;
+}
+
+header a
+{
+	text-decoration: none;
+	color: #e5e5e5;
+	font-size: 20px;
+	font-family: Abel;
+	padding: 5px 10px 5px 10px;
+	transition-duration: 0.15s;
+}
+
+header a:hover
+{
+	background-color: #e5e5e5;
+	color: #252525;
+	transition-duration: 0.15s;
+}
+
+body, section#game
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+section#game
+{
+	padding: 0px 15px 25px 15px;
+	border-radius: 15px;
+}
+
+p
+{
+	text-align: center;
+	font-family: Abel;
+	font-size: 22px;
+}
+
+#title
+{
+	font-size: 25px;
+	font-family: Audiowibe;
+	border-top: solid 2px #252525;
+	border-bottom: solid 2px #252525;
+	background-color: #e5e5e5a0;
+	margin: 40px;
+}
+
+#board
+{
+	display: grid;
+	grid-template-columns: 70px 70px;
+	grid-template-rows: 70px 70px;
+	gap: 12px;
+	transform: rotate(45deg);
+	margin-top: 4vh;
+	margin-bottom: 4vh;
+}
+
+#board div.clr
+{
+	width: 70px;
+	height: 70px;
+	border: solid 2px #252525;
+}
+
+#red
+{
+	background-color: #500000;
+}
+
+#yellow
+{
+	background-color: #505000;
+}
+
+#blue
+{
+	background-color: #000050;
+}
+
+#green
+{
+	background-color: #005000;
+}
+
+button
+{
+	background-color: #252525;
+	color: #e5e5e5;
+	border: solid 2px #252525;
+	border-radius: 10px;
+	transition-duration: 0.15s;
+	font-size: 20px;
+	font-family: Abel;
+}
+
+button:hover
+{
+	background-color: #e5e5e5;
+	color: #252525;
+	transition-duration: 0.15s;
+}
