@@ -12,6 +12,7 @@
 	</header>
 	<body>
 		<p id="title">Bonjour, vous venez tester votre mémoire ?</p>
+		<p id="subtitle">Veuillez séléctionner un mode de jeu pour continuer</p>
 		<div id="game_mod">
 			<a href="game_mod/index_double.php">Tri par pair</a>
 			<a href="game_mod/index_simon.php">Simon</a>
