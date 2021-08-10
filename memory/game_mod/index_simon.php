@@ -33,6 +33,7 @@
 			</div>
 			<div>
 				<button id="repeat">Répéter la séquence</button>
+				<button id="start">Commencer</button>
 			</div>
 		</section>
 	</body>

@@ -141,3 +141,8 @@ button:hover
 	color: #252525;
 	transition-duration: 0.15s;
 }
+
+#repeat
+{
+	display: none;
+}

@@ -118,6 +118,7 @@ const clr_div = document.querySelectorAll(".clr");
 const board_game = document.querySelector("#board");
 const p_hight_score = document.querySelector("p#record");
 const p_current_seq = document.querySelector("p#current");
+const btn_start = document.querySelector("button#start");
 const btn_repeat = document.querySelector("button#repeat");
 let tmp_clr;
 let plr_tmp_clr;
@@ -128,7 +129,13 @@ let playable = 0;
 let repeatable = 0;
 let current_seq = 0;
 let hight_score = 0;
-play_seq(repeatable, playable, seq, seq_length);
+
+btn_start.addEventListener('click', function(){
+	btn_start.style.display = "none";
+	btn_repeat.style.display = "inline-block";
+	play_seq(repeatable, playable, seq, seq_length);
+});
+
 clr_div.forEach(item => {
 	item.addEventListener('click', function(){
 		if (playable == 1)
