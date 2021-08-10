@@ -117,6 +117,13 @@ p
 	background-color: #005000;
 }
 
+div#score
+{
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+}
+
 button
 {
 	background-color: #252525;

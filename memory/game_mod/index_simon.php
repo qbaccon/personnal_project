@@ -17,6 +17,7 @@
 			<div id="htp">
 				<p>
 					Le but du jeu est de répéter la séquence de couleur qui se joue</br>
+					Vous pouvez répéter la séquence en cours mais cela ne vous fera pas progresser</br>
 					Essayer de faire la plus grande série (et sans tricher)
 				</p>
 			</div>
@@ -26,8 +27,9 @@
 				<div class="clr" id="blue"></div>
 				<div class="clr" id="green"></div>
 			</div>
-			<div>
-				<p>Série record: 0</p>
+			<div id="score">
+				<p id="current">Série actuelle: 0</p>
+				<p id="record">Meilleur série: 0</p>
 			</div>
 			<div>
 				<button id="repeat">Répéter la séquence</button>
