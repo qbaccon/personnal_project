@@ -56,45 +56,69 @@ function chk_mv_mate(tile_e, coo_s, coo_e, inv_clr, clr)
 	return 0;
 }
 
-const btn_move = document.querySelector("#send_m");
+const board_till = document.querySelectorAll("#white, #black");
 const btn_ctn = document.querySelector("#continue");
 let goal = document.querySelector("p#goal");
 let p_msg = document.querySelector("p.msg");
+let coo_s;
+let till_s;
+let coo_e;
+let till_e;
+let save_till;
+let till_cnt = 0;
 let till_goal1;
 let till_goal2;
 let till_goal3;
 let till_goal4;
 
-btn_move.addEventListener('click', function() {
-	let bad_move = 0;
-	let coo_s = document.querySelector(".col_s").value + document.querySelector(".row_s").value;
-	let coo_e = document.querySelector(".col_e").value + document.querySelector(".row_e").value;
-	let tile_s = document.querySelector("." + coo_s + " img");
-	let tile_e = document.querySelector("." + coo_e + " img");
-	bad_move = chk_move(tile_s, tile_e, coo_s, coo_e, "M", "B");
-	if (bad_move == 1)
+board_till.forEach(till => till.addEventListener('click', function()
+{
+	if (till_cnt == 0)
 	{
-		console.log("br");
-		bad_move = broque(coo_s, coo_e, "B", "W");
+		till_s = document.querySelector("." + this.className + " img");
+		coo_s = this.className;
+		save_till = this;
+		this.style.backgroundColor = "#7e1515";
+		till_cnt = 1;
 	}
-	if (bad_move == 1)
-		bad_move = lroque(coo_s, coo_e, "B", "W");
-	if (bad_move == 1)
+	else if (till_cnt == 1)
 	{
-		p_msg.style.filter = "opacity(100%)";
-		window.setTimeout(function(){
-			p_msg.style.filter = "opacity(0%)";
-		}, 3500);
+		till_e = document.querySelector("." + this.className + " img");
+		coo_e = this.className;
+		till_cnt = 2;
 	}
-	till_goal1 = document.querySelector(".g1 img");
-	till_goal2 = document.querySelector(".f1 img");
-	till_goal3 = document.querySelector(".c1 img");
-	till_goal4 = document.querySelector(".d1 img");
-	if ((till_goal1.src.search("roiW") > 0 && till_goal2.src.search("tourW") > 0)
-	|| till_goal3.src.search("roiW") > 0 && till_goal4.src.search("tourW") > 0)
+	if (till_cnt == 2)
 	{
-		btn_move.style.display = "none";
-		btn_ctn.style.display = "inline";
-		goal.textContent = "Objectif rempli, vous avez terminer toutes les initiations";
+		let bad_move = 0;
+		bad_move = chk_move(till_s, till_e, coo_s, coo_e, "M", "B");
+		if (bad_move == 1)
+		{
+			console.log("br");
+			bad_move = broque(coo_s, coo_e, "B", "W");
+		}
+		if (bad_move == 1)
+			bad_move = lroque(coo_s, coo_e, "B", "W");
+		if (bad_move == 1)
+		{
+			p_msg.style.filter = "opacity(100%)";
+			window.setTimeout(function(){
+				p_msg.style.filter = "opacity(0%)";
+			}, 3500);
+		}
+		till_goal1 = document.querySelector(".g1 img");
+		till_goal2 = document.querySelector(".f1 img");
+		till_goal3 = document.querySelector(".c1 img");
+		till_goal4 = document.querySelector(".d1 img");
+		if ((till_goal1.src.search("roiW") > 0 && till_goal2.src.search("tourW") > 0)
+		|| till_goal3.src.search("roiW") > 0 && till_goal4.src.search("tourW") > 0)
+		{
+			btn_ctn.style.display = "inline";
+			goal.textContent = "Objectif rempli, vous avez terminer toutes les initiations";
+		}
+		till_cnt = 0;
+		if (save_till.id == "white")
+			save_till.style.backgroundColor = "#c5c5c5";
+		else
+			save_till.style.backgroundColor = "#606060";
 	}
-});
+}));

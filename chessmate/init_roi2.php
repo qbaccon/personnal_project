@@ -75,50 +75,6 @@
 				<div class='coo_chr'><p>G</p></div>
 				<div class='coo_chr'><p>H</p></div>
 			</section>
-			<section class="form_select">
-				<p id="piece">Séléctionner une pièce</p>
-				<div class="slct">
-					<select name="col_s" class="col_s">
-						<option value="a">A</option>
-						<option value="b">B</option>
-						<option value="c">C</option>
-						<option value="d">D</option>
-						<option value="e">E</option>
-						<option value="f">F</option>
-						<option value="g">G</option>
-						<option value="h">H</option>
-					</select>
-					<select name="row_s" class="row_s">
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-					</select>
-				</div>
-				<p id="end">Séléctionner la case d'arrivée</p>
-				<div class="slct">
-					<select name="col_e" class="col_e">
-						<option value="a">A</option>
-						<option value="b">B</option>
-						<option value="c">C</option>
-						<option value="d">D</option>
-						<option value="e">E</option>
-						<option value="f">F</option>
-						<option value="g">G</option>
-						<option value="h">H</option>
-					</select>			
-					<select name="row_e" class="row_e">
-						<option value="1">1</option>				
-						<option value="2">2</option>				
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-					</select>
-				</div>
-				</br>
-				<button name="send_m" id="send_m">Valider</button>
-			</section>
 		</section>
 		<section id="train">
 			<p>

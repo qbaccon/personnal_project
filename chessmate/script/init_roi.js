@@ -55,34 +55,58 @@ function chk_mv_mate(tile_e, coo_s, coo_e, inv_clr)
 	return 0;
 }
 
-const btn_move = document.querySelector("#send_m");
+const board_till = document.querySelectorAll("#white, #black");
 const btn_ctn = document.querySelector("#continue");
 let goal = document.querySelector("p#goal");
 let p_msg = document.querySelector("p.msg");
+let coo_s;
+let till_s;
+let coo_e;
+let till_e;
+let save_till;
+let till_cnt = 0;
 let till_goal1;
 
-btn_move.addEventListener('click', function() {
-	let bad_move = 0;
-	let coo_s = document.querySelector(".col_s").value + document.querySelector(".row_s").value;
-	let coo_e = document.querySelector(".col_e").value + document.querySelector(".row_e").value;
-	let tile_s = document.querySelector("." + coo_s + " img");
-	let tile_e = document.querySelector("." + coo_e + " img");
-	if (tile_s.src.search("roiW") > 0)
-		bad_move = move_roi(tile_s, tile_e, coo_s, coo_e, "M", "B");
-	else
-		bad_move = 1;
-	if (bad_move == 1)
+board_till.forEach(till => till.addEventListener('click', function()
+{
+	if (till_cnt == 0)
 	{
-		p_msg.style.filter = "opacity(100%)";
-		window.setTimeout(function(){
-			p_msg.style.filter = "opacity(0%)";
-		}, 3500);
+		till_s = document.querySelector("." + this.className + " img");
+		coo_s = this.className;
+		save_till = this;
+		this.style.backgroundColor = "#7e1515";
+		till_cnt = 1;
 	}
-	till_goal1 = document.querySelector(".b4 img");
-	if (till_goal1.src.search("pionB") < 0)
+	else if (till_cnt == 1)
 	{
-		btn_move.style.display = "none";
-		btn_ctn.style.display = "inline";
-		goal.textContent = "Objectif rempli, vous avez terminer toutes les initiations";
+		till_e = document.querySelector("." + this.className + " img");
+		coo_e = this.className;
+		till_cnt = 2;
 	}
-});
+	if (till_cnt == 2)
+	{
+		let bad_move = 0;
+		if (till_s.src.search("roiW") > 0)
+			bad_move = move_roi(till_s, till_e, coo_s, coo_e, "M", "B");
+		else
+			bad_move = 1;
+		if (bad_move == 1)
+		{
+			p_msg.style.filter = "opacity(100%)";
+			window.setTimeout(function(){
+				p_msg.style.filter = "opacity(0%)";
+			}, 3500);
+		}
+		till_goal1 = document.querySelector(".b4 img");
+		if (till_goal1.src.search("pionB") < 0)
+		{
+			btn_ctn.style.display = "inline";
+			goal.textContent = "Objectif rempli, vous avez terminer toutes les initiations";
+		}
+		till_cnt = 0;
+		if (save_till.id == "white")
+			save_till.style.backgroundColor = "#c5c5c5";
+		else
+			save_till.style.backgroundColor = "#606060";
+	}
+}));

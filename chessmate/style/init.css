@@ -107,7 +107,7 @@ section div img
 	padding-left: 20px;
 }
 
-.form_select, .upgrade
+.upgrade
 {
 	display: flex;
 	flex-direction: column;
@@ -123,7 +123,7 @@ section div img
 	display: none;
 }
 
-.form_select p, .upgrade p
+.upgrade p
 {
 	font-family: Abel;
 	background-color: #252525;
@@ -133,7 +133,7 @@ section div img
 	font-size: 20px;
 }
 
-.form_select select, .upgrade select
+.upgrade select
 {
 	outline: none;
 	font-family: Abel;
@@ -145,7 +145,7 @@ section div img
 	transition-duration: 0.12s;
 }
 
-.form_select select:hover, .upgrade select:hover
+.upgrade select:hover
 {
 	background-color: #e5e5e5;
 	color: #252525;
