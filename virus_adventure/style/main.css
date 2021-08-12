@@ -1,0 +1,25 @@
+html, body
+{
+	margin: 0px;
+}
+
+div#board
+{
+	display: grid;
+}
+
+div#board div
+{
+	height: 60px;
+	width: 60px;
+}
+
+div.block_wall
+{
+	background-color: #252525;
+}
+
+div.def_floor
+{
+	background-color: #e5e5e5;
+}
