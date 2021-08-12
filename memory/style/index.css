@@ -42,14 +42,14 @@ body
 	border-top: solid 2px #252525;
 	border-bottom: solid 2px #252525;
 	background-color: #e5e5e5a0;
-	margin: 75px;
+	margin-top: 10vh;
 }
 
 #subtitle
 {
 	font-size: 22px;
-	margin-top: 50px;
-	margin-bottom: 20px;
+	margin-top: 10vh;
+	margin-bottom: 3vh;
 }
 
 #game_mod
@@ -95,4 +95,9 @@ footer p
 	font-size: 20px;
 	font-family: Abel;
 	color: #e5e5e5;
+}
+
+p
+{
+	text-align: center;
 }
