@@ -194,13 +194,18 @@ board_game.addEventListener('click', function()
 			{
 				seq_length++;
 				current_seq++;
+				p_current_seq.style.color = "#008000";
 			}
 		}
 		else
 		{
 			seq_length = 3;
 			current_seq = 0;
+			p_current_seq.style.color = "#800000";
 		}
+		window.setTimeout(function(){
+			p_current_seq.style.color = "#000000";
+		}, 1000);
 		seq.splice(0, seq.length);
 		player_seq.splice(0, player_seq.length);
 		playable = 0;
