@@ -242,7 +242,7 @@ p#end
 	margin: 15px 0px 5px 0px;
 }
 
-button#send_upg
+button#send_upg, button#new_game
 {
 	font-family: Abel;
 	font-size: 20px;
@@ -254,7 +254,12 @@ button#send_upg
 	transition-duration: 0.18s;
 }
 
-button#send_upg:hover
+button#new_game
+{
+	margin: 0px;
+}
+
+button#send_upg:hover, button#new_game:hover
 {
 	background-color: #e5e5e5;
 	color: #252525;

@@ -168,6 +168,9 @@
 		</section> -->
 	</section>
 	<p id="chess_msg">Votre Roi est en échec</p>
+	<form action="game.php" method="post">
+		<button id="new_game" type="submit">Nouveu jeu</button>
+	</form>
 	<script src="class/token_captured.js"></script>
 	<script src="script/pat_ending.js"></script>
 	<script src="script/token_move.js"></script>

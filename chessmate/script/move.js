@@ -165,7 +165,7 @@ board_till.forEach(elem => elem.addEventListener('click', function()
 				inv_clr = "W";
 			king_coo = get_king_coo(clr);
 			king_till = document.querySelector("." + king_coo + " img");
-			coo_token_atk_king = chk_mv_mate(king_till, king_coo, king_coo, inv_clr, clr)
+			coo_token_atk_king = chk_mv_mate(king_till, king_coo, king_coo, inv_clr, clr);
 			if (coo_token_atk_king != 0)
 			{
 				chess_msg.style.filter = "opacity(100%)";

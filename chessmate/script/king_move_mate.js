@@ -28,11 +28,8 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 		tmp_coo = tmp_row + tmp_col;
 		tmp_till = document.querySelector("." + tmp_coo + " img");
 		if (tmp_till.src.search("Z") > 0 || tmp_till.src.search(inv_clr) > 0)
-			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, clr)))
-			{
-				console.log(tmp_coo);
+			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, inv_clr)))
 				return 0;
-			}
 	}
 	tmp_col = Number(king_coo.substr(1, 1)) + 1;
 	tmp_row = king_coo.charCodeAt(0) + 1;
@@ -42,11 +39,8 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 		tmp_coo = tmp_row + tmp_col;
 		tmp_till = document.querySelector("." + tmp_coo + " img");
 		if (tmp_till.src.search("Z") > 0 || tmp_till.src.search(inv_clr) > 0)
-			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, clr)))
-			{
-				console.log(tmp_coo);
+			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, inv_clr)))
 				return 0;
-			}
 	}
 	tmp_col = Number(king_coo.substr(1, 1));
 	tmp_row = king_coo.charCodeAt(0) + 1;
@@ -56,11 +50,8 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 		tmp_coo = tmp_row + tmp_col;
 		tmp_till = document.querySelector("." + tmp_coo + " img");
 		if (tmp_till.src.search("Z") > 0 || tmp_till.src.search(inv_clr) > 0)
-			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, clr)))
-			{
-				console.log(tmp_coo);
+			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, inv_clr)))
 				return 0;
-			}
 	}
 	tmp_col = Number(king_coo.substr(1, 1) - 1);
 	tmp_row = king_coo.charCodeAt(0) + 1;
@@ -70,11 +61,8 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 		tmp_coo = tmp_row + tmp_col;
 		tmp_till = document.querySelector("." + tmp_coo + " img");
 		if (tmp_till.src.search("Z") > 0 || tmp_till.src.search(inv_clr) > 0)
-			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, clr)))
-			{
-				console.log(tmp_coo);
+			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, inv_clr)))
 				return 0;
-			}
 	}
 	tmp_col = Number(king_coo.substr(1, 1) - 1);
 	tmp_row = king_coo.charCodeAt(0);
@@ -84,11 +72,8 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 		tmp_coo = tmp_row + tmp_col;
 		tmp_till = document.querySelector("." + tmp_coo + " img");
 		if (tmp_till.src.search("Z") > 0 || tmp_till.src.search(inv_clr) > 0)
-			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, clr)))
-			{
-				console.log(tmp_coo);
+			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, inv_clr)))
 				return 0;
-			}
 	}
 	tmp_col = Number(king_coo.substr(1, 1) - 1);
 	tmp_row = king_coo.charCodeAt(0) - 1;
@@ -98,11 +83,8 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 		tmp_coo = tmp_row + tmp_col;
 		tmp_till = document.querySelector("." + tmp_coo + " img");
 		if (tmp_till.src.search("Z") > 0 || tmp_till.src.search(inv_clr) > 0)
-			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, clr)))
-			{
-				console.log(tmp_coo);
+			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, inv_clr)))
 				return 0;
-			}
 	}
 	tmp_col = Number(king_coo.substr(1, 1));
 	tmp_row = king_coo.charCodeAt(0) - 1;
@@ -112,11 +94,8 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 		tmp_coo = tmp_row + tmp_col;
 		tmp_till = document.querySelector("." + tmp_coo + " img");
 		if (tmp_till.src.search("Z") > 0 || tmp_till.src.search(inv_clr) > 0)
-			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, clr)))
-			{
-				console.log(tmp_coo);
+			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, inv_clr)))
 				return 0;
-			}
 	}
 	tmp_col = Number(king_coo.substr(1, 1) + 1);
 	tmp_row = king_coo.charCodeAt(0) - 1;
@@ -126,11 +105,8 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 		tmp_coo = tmp_row + tmp_col;
 		tmp_till = document.querySelector("." + tmp_coo + " img");
 		if (tmp_till.src.search("Z") > 0 || tmp_till.src.search(inv_clr) > 0)
-			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, clr)))
-			{
-				console.log(tmp_coo);
+			if(!(chk_mv_mate(tmp_till, king_coo, tmp_coo, inv_clr, inv_clr)))
 				return 0;
-			}
 	}
 	return 1;
 }
@@ -150,7 +126,7 @@ function chk_mv_mate(tile_e, coo_s, coo_e, inv_clr, clr)
 			if (coo_tmp != coo_s && coo_tmp != coo_e)
 			{
 				if (tile_tmp.src.search(inv_clr) > 0)
-					if (!(chk_move(tile_tmp, tile_e, coo_tmp, coo_e, "C", clr)))
+					if (!(chk_move(tile_tmp, tile_e, coo_tmp, coo_e, "C", clr, inv_clr)))
 						return coo_tmp;
 			}
 			col_tmp = String.fromCharCode(col_tmp.charCodeAt(0) + 1);
@@ -181,7 +157,7 @@ function chk_board(till_e, coo_e, inv_clr, clr, action, king_coo, type)
 			if (tile_tmp && coo_tmp != coo_e && coo_tmp != coo_e)
 			{
 				if (tile_tmp.src.search(clr) > 0)
-					if (!(chk_move(tile_tmp, till_e, coo_tmp, coo_e, type, inv_clr)))
+					if (!(chk_move(tile_tmp, till_e, coo_tmp, coo_e, type, inv_clr, clr)))
 						return 0;
 			}
 			col_tmp = String.fromCharCode(col_tmp.charCodeAt(0) + 1);
@@ -198,8 +174,8 @@ function can_handle_attaker(coo_atk, coo_king, clr, inv_clr)
 	let coo_tmp;
 	let till_tmp;
 	let i = 1;
-	if (!(chk_board(till_atk, coo_atk, inv_clr, clr, "take", coo_king, "C")))
-		return 0;
+	if (!(chk_board(till_atk, coo_atk, inv_clr, inv_clr, "take", coo_king, "C")))
+		return 1;
 	if (till_atk.src.search("tour") > 0 || till_atk.src.search("reine") > 0)
 	{
 		if (Number(coo_atk.substr(1, 1)) < Number(coo_king.substr(1, 1)))
