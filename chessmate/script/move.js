@@ -167,14 +167,17 @@ board_till.forEach(elem => elem.addEventListener('click', function()
 	if (till_cnt == 0 && end == 0)
 	{
 		till_s = document.querySelector("." + this.className + " img");
-		coo_s = this.className;
-		save_till = this;
-		this.style.backgroundColor = "#15a5a5";
-		save_till_tab = ignite_good_till(this, board_till, inv_clr, clr);
-		save_till_tab.forEach(till => {
-			till.style.backgroundColor = "#157e15";
-		});
-		till_cnt = 1;
+		if (till_s.src.search(clr) > 0)
+		{
+			coo_s = this.className;
+			save_till = this;
+			this.style.backgroundColor = "#15a5a5";
+			save_till_tab = ignite_good_till(this, board_till, inv_clr, clr);
+			save_till_tab.forEach(till => {
+				till.style.backgroundColor = "#157e15";
+			});
+			till_cnt = 1;
+		}
 	}
 	else if (till_cnt == 1 && end == 0)
 	{
@@ -221,7 +224,7 @@ board_till.forEach(elem => elem.addEventListener('click', function()
 			bm_msg.style.filter = "opacity(100%)";
 			window.setTimeout(function(){
 				bm_msg.style.filter = "opacity(0%)";
-			}, 2500);
+			}, 2000);
 		}
 		if (end == 0)
 		{

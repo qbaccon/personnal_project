@@ -22,7 +22,7 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 	let tmp_row = king_coo.charCodeAt(0);
 	let tmp_coo;
 	let tmp_till;
-	if (tmp_col < 8)
+	if (tmp_col < 9)
 	{
 		tmp_row = String.fromCharCode(tmp_row);
 		tmp_coo = tmp_row + tmp_col;
@@ -33,7 +33,7 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 	}
 	tmp_col = Number(king_coo.substr(1, 1)) + 1;
 	tmp_row = king_coo.charCodeAt(0) + 1;
-	if (tmp_col < 8  && tmp_row < 104)
+	if (tmp_col < 9  && tmp_row < 105)
 	{
 		tmp_row = String.fromCharCode(tmp_row);
 		tmp_coo = tmp_row + tmp_col;
@@ -44,7 +44,7 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 	}
 	tmp_col = Number(king_coo.substr(1, 1));
 	tmp_row = king_coo.charCodeAt(0) + 1;
-	if (tmp_row < 104)
+	if (tmp_row < 105)
 	{
 		tmp_row = String.fromCharCode(tmp_row);
 		tmp_coo = tmp_row + tmp_col;
@@ -55,7 +55,7 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 	}
 	tmp_col = Number(king_coo.substr(1, 1) - 1);
 	tmp_row = king_coo.charCodeAt(0) + 1;
-	if (tmp_col > 0 && tmp_row < 104)
+	if (tmp_col > 0 && tmp_row < 105)
 	{
 		tmp_row = String.fromCharCode(tmp_row);
 		tmp_coo = tmp_row + tmp_col;
@@ -77,7 +77,7 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 	}
 	tmp_col = Number(king_coo.substr(1, 1) - 1);
 	tmp_row = king_coo.charCodeAt(0) - 1;
-	if (tmp_col > 0 && tmp_row > 97)
+	if (tmp_col > 0 && tmp_row > 96)
 	{
 		tmp_row = String.fromCharCode(tmp_row);
 		tmp_coo = tmp_row + tmp_col;
@@ -88,7 +88,7 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 	}
 	tmp_col = Number(king_coo.substr(1, 1));
 	tmp_row = king_coo.charCodeAt(0) - 1;
-	if (tmp_row > 97)
+	if (tmp_row > 96)
 	{
 		tmp_row = String.fromCharCode(tmp_row);
 		tmp_coo = tmp_row + tmp_col;
@@ -99,7 +99,7 @@ function chk_till_around_king(king_till, king_coo, inv_clr, clr)
 	}
 	tmp_col = Number(king_coo.substr(1, 1) + 1);
 	tmp_row = king_coo.charCodeAt(0) - 1;
-	if (tmp_col < 8 && tmp_row > 97)
+	if (tmp_col < 9 && tmp_row > 96)
 	{
 		tmp_row = String.fromCharCode(tmp_row);
 		tmp_coo = tmp_row + tmp_col;
