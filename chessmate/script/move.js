@@ -137,7 +137,7 @@ let coo_e;
 let till_e;
 board_till.forEach(elem => elem.addEventListener('click', function()
 {
-	if (till_cnt == 0)
+	if (till_cnt == 0 && end == 0)
 	{
 		till_s = document.querySelector("." + this.className + " img");
 		coo_s = this.className;
@@ -145,7 +145,7 @@ board_till.forEach(elem => elem.addEventListener('click', function()
 		this.style.backgroundColor = "#7e1515";
 		till_cnt = 1;
 	}
-	else if (till_cnt == 1)
+	else if (till_cnt == 1 && end == 0)
 	{
 		till_e = document.querySelector("." + this.className + " img");
 		coo_e = this.className;

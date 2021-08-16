@@ -44,6 +44,8 @@ function move_pion(tile_s, tile_e, coo_s, coo_e, type)
 				if (type == "M")
 				{
 					act_move(tile_s, tile_e);
+					if (coo_e.substr(1, 1) == "8")
+							form_toggle();
 					return 0;
 				}
 			}
@@ -58,6 +60,8 @@ function move_pion(tile_s, tile_e, coo_s, coo_e, type)
 				if (type == "M")
 				{
 					act_move(tile_s, tile_e);
+					if (coo_e.substr(1, 1) == "8")
+							form_toggle();
 					return 0;
 				}
 			}
@@ -110,6 +114,9 @@ function move_pion(tile_s, tile_e, coo_s, coo_e, type)
 			{
 				if (type == "M")
 					act_move(tile_s, tile_e);
+					if (coo_e.substr(1, 1) == "1")
+							form_toggle();
+					return 0;
 			}
 			else
 				return 1;
@@ -122,6 +129,8 @@ function move_pion(tile_s, tile_e, coo_s, coo_e, type)
 				if (type == "M")
 				{
 					act_move(tile_s, tile_e);
+					if (coo_e.substr(1, 1) == "1")
+							form_toggle();
 					return 0;
 				}
 			}

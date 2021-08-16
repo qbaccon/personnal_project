@@ -58,6 +58,7 @@ h1
 {
 	h1
 	{
+		margin-top: 10vh;
 		font-size: 18px;
 	}
 }
@@ -78,6 +79,14 @@ p.msg, #chess_msg
 	align-items: center;
 	justify-content: center;
 	gap: 30px;
+}
+
+@media (max-width: 410px)
+{
+	.game
+	{
+		flex-direction: column;
+	}
 }
 
 .board
