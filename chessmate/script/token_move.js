@@ -14,11 +14,11 @@ function move_pion(tile_s, tile_e, coo_s, coo_e, type)
 						act_move(tile_s, tile_e);
 						if (coo_e.substr(1, 1) == "8")
 							form_toggle();
-						return 0;
 					}
-					else
-						return 1;
+					return 0;
 				}
+				else
+					return 1;
 			}
 			else if (coo_s.substr(1, 1) == "2")
 			{
@@ -46,8 +46,8 @@ function move_pion(tile_s, tile_e, coo_s, coo_e, type)
 					act_move(tile_s, tile_e);
 					if (coo_e.substr(1, 1) == "8")
 							form_toggle();
-					return 0;
 				}
+				return 0;
 			}
 			else
 				return 1;
@@ -62,8 +62,8 @@ function move_pion(tile_s, tile_e, coo_s, coo_e, type)
 					act_move(tile_s, tile_e);
 					if (coo_e.substr(1, 1) == "8")
 							form_toggle();
-					return 0;
 				}
+				return 0;
 			}
 			else
 				return 1;
@@ -85,8 +85,8 @@ function move_pion(tile_s, tile_e, coo_s, coo_e, type)
 						act_move(tile_s, tile_e);
 						if (coo_e.substr(1, 1) == "1")
 							form_toggle();
-						return 0;				
 					}
+					return 0;				
 				}
 				else
 					return 1;		
@@ -113,10 +113,12 @@ function move_pion(tile_s, tile_e, coo_s, coo_e, type)
 			if (tile_e.src.search("W") > 0 || type == "C")
 			{
 				if (type == "M")
+				{
 					act_move(tile_s, tile_e);
 					if (coo_e.substr(1, 1) == "1")
 							form_toggle();
-					return 0;
+				}			
+				return 0;
 			}
 			else
 				return 1;
@@ -131,8 +133,8 @@ function move_pion(tile_s, tile_e, coo_s, coo_e, type)
 					act_move(tile_s, tile_e);
 					if (coo_e.substr(1, 1) == "1")
 							form_toggle();
-					return 0;
 				}
+				return 0;
 			}
 			else
 				return 1;
@@ -496,7 +498,7 @@ function move_roi(tile_s, tile_e, coo_s, coo_e, type, inv_clr, clr)
 	if ((coo_s.charCodeAt(0) == coo_e.charCodeAt(0)) &&
 		(Number(coo_s.substr(1, 1)) + 1 == Number(coo_e.substr(1, 1))))
 	{
-		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr))
+		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr) > 0)
 		{
 			if (type == "M")
 			{
@@ -512,7 +514,7 @@ function move_roi(tile_s, tile_e, coo_s, coo_e, type, inv_clr, clr)
 	else if ((coo_s.charCodeAt(0) + 1 == coo_e.charCodeAt(0)) &&
 		(Number(coo_s.substr(1, 1)) + 1 == Number(coo_e.substr(1, 1))))
 	{
-		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr))
+		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr) > 0)
 		{
 			if (type == "M")
 			{
@@ -528,7 +530,7 @@ function move_roi(tile_s, tile_e, coo_s, coo_e, type, inv_clr, clr)
 	else if ((coo_s.charCodeAt(0) + 1 == coo_e.charCodeAt(0)) &&
 		(Number(coo_s.substr(1, 1)) == Number(coo_e.substr(1, 1))))
 	{
-		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr))
+		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr) > 0)
 		{		
 			if (type == "M")
 			{
@@ -544,7 +546,7 @@ function move_roi(tile_s, tile_e, coo_s, coo_e, type, inv_clr, clr)
 	else if ((coo_s.charCodeAt(0) + 1 == coo_e.charCodeAt(0)) &&
 		(Number(coo_s.substr(1, 1)) - 1 == Number(coo_e.substr(1, 1))))
 	{
-		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr))
+		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr) > 0)
 		{
 			if (type == "M")
 			{
@@ -560,7 +562,7 @@ function move_roi(tile_s, tile_e, coo_s, coo_e, type, inv_clr, clr)
 	else if ((coo_s.charCodeAt(0) == coo_e.charCodeAt(0)) &&
 		(Number(coo_s.substr(1, 1)) - 1 == Number(coo_e.substr(1, 1))))
 	{
-		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr))
+		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr) > 0)
 		{
 			if (type == "M")
 			{
@@ -576,7 +578,7 @@ function move_roi(tile_s, tile_e, coo_s, coo_e, type, inv_clr, clr)
 	else if ((coo_s.charCodeAt(0) - 1 == coo_e.charCodeAt(0)) &&
 		(Number(coo_s.substr(1, 1)) - 1 == Number(coo_e.substr(1, 1))))
 	{
-		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr))
+		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr) > 0)
 		{
 			if (type == "M")
 			{
@@ -592,7 +594,7 @@ function move_roi(tile_s, tile_e, coo_s, coo_e, type, inv_clr, clr)
 	else if ((coo_s.charCodeAt(0) - 1 == coo_e.charCodeAt(0)) &&
 		(Number(coo_s.substr(1, 1)) == Number(coo_e.substr(1, 1))))
 	{
-		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr))
+		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr) > 0)
 		{
 			if (type == "M")
 			{
@@ -608,7 +610,7 @@ function move_roi(tile_s, tile_e, coo_s, coo_e, type, inv_clr, clr)
 	else if ((coo_s.charCodeAt(0) - 1 == coo_e.charCodeAt(0)) &&
 		(Number(coo_s.substr(1, 1)) + 1 == Number(coo_e.substr(1, 1))))
 	{
-		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr))
+		if (tile_e.src.search("Z") > 0 || tile_e.src.search(inv_clr) > 0)
 		{
 			if (type == "M")
 			{

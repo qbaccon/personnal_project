@@ -98,8 +98,8 @@ p.msg, #chess_msg
 
 .board #white, .board #black
 {
-	width: 50px;
-	height: 50px;
+	width: 46px;
+	height: 46px;
 }
 
 @media (max-width: 410px)
@@ -112,8 +112,8 @@ p.msg, #chess_msg
 
 	.board #white, .board #black
 	{
-		width: 30px;
-		height: 30px;
+		width: 26px;
+		height: 26px;
 	}
 
 	.board img
@@ -131,19 +131,21 @@ p.msg, #chess_msg
 
 #black
 {
+	border: solid 2px #606060;
 	background-color: #606060;
 }
 
 #white
 {
+	border: solid 2px #c5c5c5;
 	background-color: #c5c5c5;
 }
 
 section div img
 {
 	position: relative;
-	top: 5px;
-	left: 5px;
+	top: 3px;
+	left: 3px;
 }
 
 .coo_num

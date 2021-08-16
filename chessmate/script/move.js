@@ -116,6 +116,32 @@ function end_game(clr)
 		title.textContent = "Victoire des pièces noires !";
 }
 
+function ignite_good_till(till_s, all_till, inv_clr, clr)
+{
+	let good_mv_till = [];
+	let coo_s = till_s.className;
+	let good_mv_till_tmp;
+	let coo_e;
+	let type = "C";
+	till_s = document.querySelector("." + coo_s + " img");
+	if (till_s.src.search("pion") > 0)
+		type = "K";
+	all_till.forEach(till =>
+	{
+		coo_e = till.className;
+		till = document.querySelector("." + coo_e + " img");
+		if (!(chk_move(till_s, till, coo_s, coo_e, type, inv_clr, clr)))
+		{
+			good_mv_till_tmp = document.querySelector("." + coo_e);
+			good_mv_till.push(good_mv_till_tmp);
+			if (till_s.src.search("roi") > 0)
+				if (chk_mv_mate(till, coo_s, coo_e, inv_clr, clr))
+					good_mv_till.pop();
+		}
+	});
+	return (good_mv_till);
+} 
+
 let king_coo;
 let king_till;
 let coo_token_atk_king;
@@ -130,6 +156,7 @@ let tc_black = new Token_captr('B', 0, 0, 0, 0);
 
 const board_till = document.querySelectorAll("#white, #black");
 let save_till;
+let save_till_tab;
 let till_cnt = 0;
 let coo_s;
 let till_s;
@@ -142,7 +169,11 @@ board_till.forEach(elem => elem.addEventListener('click', function()
 		till_s = document.querySelector("." + this.className + " img");
 		coo_s = this.className;
 		save_till = this;
-		this.style.backgroundColor = "#7e1515";
+		this.style.backgroundColor = "#15a5a5";
+		save_till_tab = ignite_good_till(this, board_till, inv_clr, clr);
+		save_till_tab.forEach(till => {
+			till.style.backgroundColor = "#157e15";
+		});
 		till_cnt = 1;
 	}
 	else if (till_cnt == 1 && end == 0)
@@ -204,5 +235,11 @@ board_till.forEach(elem => elem.addEventListener('click', function()
 			save_till.style.backgroundColor = "#c5c5c5";
 		else
 			save_till.style.backgroundColor = "#606060";
+		save_till_tab.forEach(till => {
+			if (till.id == "white")
+				till.style.backgroundColor = "#c5c5c5";
+			else
+				till.style.backgroundColor = "#606060";
+		});
 	}
 }));
