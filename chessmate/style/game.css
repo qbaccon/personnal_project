@@ -34,7 +34,7 @@ a
 	font-family: Audiowibe;
 	color: #e5e5e5;
 	background-color: #252525;
-	padding: 8px;
+	padding: 1px 6px 1px 6px;
 	border: solid #252525 2px;
 	border-radius: 0px 0px 10px 0px;
 	transition-duration: 0.15s;
@@ -52,6 +52,11 @@ h1
 	font-family: Audiowibe;
 	font-size: 24px;
 	text-align: center;
+	border: solid 3px #252525;
+	border-radius: 8px;
+	margin-top: 7vh;
+	margin-bottom: 1vh;
+	padding: 1px 6px 1px 6px;
 }
 
 @media (max-width: 410px)
@@ -70,6 +75,7 @@ p.msg, #chess_msg
 	border-bottom: solid 3px #101010;
 	filter: opacity(0%);
 	transition: all 0.5s ease;
+	margin: 15px;
 }
 
 .game

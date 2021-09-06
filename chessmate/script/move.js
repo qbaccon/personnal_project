@@ -171,7 +171,7 @@ board_till.forEach(elem => elem.addEventListener('click', function()
 		{
 			coo_s = this.className;
 			save_till = this;
-			this.style.backgroundColor = "#15a5a5";
+			this.style.backgroundColor = "#841d1d";
 			save_till_tab = ignite_good_till(this, board_till, inv_clr, clr);
 			save_till_tab.forEach(till => {
 				till.style.backgroundColor = "#157e15";

@@ -48,5 +48,4 @@ function can_move(king_till, king_coo, clr, inv_clr)
 function pat_ending()
 {
 	title.textContent = "Pat !";
-	mv_sender.style.display = "none";
 }
