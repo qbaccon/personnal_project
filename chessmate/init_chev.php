@@ -10,6 +10,7 @@
 	</head>
 	<body>
 		<?php include "fct/fct_nav.php"?>
+		<a href="index.php">Retour</a>
 		<h1>Initiation - Chevalier <img src='token/icons8-chevalierW-50.png' width='50px' height='50px'/>
 			<img src='token/icons8-chevalierB-50.png' width='50px' height='50px'/></h1>
 		<p class="msg">Mouvement incorrect</p>
